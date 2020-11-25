@@ -71,9 +71,13 @@ function watchTask() {
     },
   });
 
-  // Watch files and re-run tasks
+  // Re-compiles and streams scss changes
   watch(files.scssPath, scssTask);
+
+  // Re-compiles and refreshes browser when JavaScript changes
   watch(files.jsPath).on("change", parallel(jsTask, browserSync.reload));
+
+  // Refreshes browser when HTML changes
   watch(files.htmlPath).on("change", browserSync.reload);
 }
 

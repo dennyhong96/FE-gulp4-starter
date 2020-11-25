@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "gulp"
+  },
   "keywords": [],
   "author": "Denny Hong",
   "license": "ISC",
